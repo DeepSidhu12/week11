@@ -1,3 +1,3 @@
-module torontoTimeAPI
+module github.com/harshdeep14786/week11
 
-go 1.21.4
+go 1.21.1
