@@ -19,12 +19,12 @@ func TestTorontoWeatherHandler(t *testing.T) {
 
 	handler.ServeHTTP(rr, req)
 
-	// Check the status code is what we expect.
+	//Check the status code is what we expect.
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)
 	}
 
-	// Check the response body is in the correct format.
+	//Check the response body is in the correct format
 	var response map[string]string
 	err = json.NewDecoder(rr.Body).Decode(&response)
 	if err != nil {
