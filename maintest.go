@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 )
-
+//Tested this file
 // TestTorontoTimeHandler tests the TorontoTimeHandler function
 func TestTorontoWeatherHandler(t *testing.T) {
 	req, err := http.NewRequest("GET", "/toronto-weather", nil)
@@ -30,7 +30,7 @@ func TestTorontoWeatherHandler(t *testing.T) {
 	if err != nil {
 		t.Fatal("Failed to decode response body")
 	}
-
+//
 	if _, ok := response["current_weather_toronto"]; !ok {
 		t.Errorf("handler returned unexpected body: key 'current_weather_toronto' not found in response")
 	}
